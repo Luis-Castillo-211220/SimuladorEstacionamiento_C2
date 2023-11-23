@@ -54,7 +54,7 @@ func enterParkingLot(pos int, pc *Parking, mu *sync.Mutex, chEntrance *chan int,
 func parkCar(c *Car, pos int, pc *Parking, mu *sync.Mutex, spaces *[20]bool, chEntrance *chan int, sprite *pixel.Sprite, chWin chan utils.ImgCar, coo pixel.Vec) {
 	mu.Lock()
 	pc.nSpaces--
-	fmt.Printf("No. Lugar. %d: %d\n", c.Id, pos)
+	fmt.Printf("Entrada: %d\n", c.Id, pos)
 	fmt.Printf("Espacios disponibles: %d\n", pc.nSpaces)
 	mu.Unlock()
 
